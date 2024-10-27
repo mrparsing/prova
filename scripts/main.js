@@ -28,7 +28,7 @@ function initializeApp() {
 
     // Registra il Service Worker
     navigator.serviceWorker
-      .register("../firebase-messaging-sw.js")
+      .register("/prova/firebase-messaging-sw.js")
       .then(swReg => {
         console.log("Service Worker is registered", swReg);
         swRegistration = swReg;
