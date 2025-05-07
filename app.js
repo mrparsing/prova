@@ -1,8 +1,8 @@
 import { pipeline } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.5.2';
 
 const init = async () => {
-  const embedder = await pipeline('feature-extraction', 'Xenova/distiluse-base-multilingual-cased-v1');
-
+const embedder = await pipeline('feature-extraction', 'model_quantized.onnx');
+  
   const getEmbedding = async (text) => {
     const output = await embedder(text);
     const vectors = output[0];
